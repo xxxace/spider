@@ -29,6 +29,7 @@
 # future: 代表了将来要执行，但现在还没有执行的任务，和task没有本质上的区别
 # async: 定义一个协程
 # await：挂起阻塞的方法
+# request.get 是同步的，ai0http 是异步的用于异步协程开发
 
 # 导入线程池模块对应的类
 from multiprocessing.dummy import Pool
