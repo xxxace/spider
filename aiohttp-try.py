@@ -27,7 +27,11 @@ loop = asyncio.get_event_loop()
 for url in urls:
     c = request(url)
     task = asyncio.ensure_future(c, loop=loop)
-    tasks.append(task)
+    tasks.append(task) 
 
 
 loop.run_until_complete(asyncio.wait(tasks))
+
+
+
+
