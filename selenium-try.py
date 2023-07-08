@@ -5,19 +5,28 @@
 # 谷歌浏览器驱动与谷歌浏览器版本对应表
 # https://blog.csdn.net/huilan_same/article/details/51896672
 # mitmproxy防止selenium被屏蔽
+# PIL图片截取
+# from PIL import Image
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver import ChromeOptions
 from lxml import etree
 from time import sleep
 
-chrome_option = Options()
+browser_option = ChromeOptions()
 # 无头浏览器（即不显示浏览器）
-chrome_option.add_argument('--headless')
-chrome_option.add_argument('--disable-gpu')
+browser_option.add_argument('--headless')
+browser_option.add_argument('--disable-gpu')
+# 实现规避检测
+browser_option.add_experimental_option(
+    'excludeSwitches', ['enable-automation']
+)
+# chrome_option = ChromeOptions()
+# chrome_option
 # 实例化一个浏览器对象
-browser = webdriver.Chrome(options=chrome_option)
+browser = webdriver.Chrome(options=browser_option)
 # 打开网页
 browser.get('https://www.baidu.com/')
 
@@ -51,7 +60,7 @@ action = ActionChains(browser)
 action.click_and_hold(div)
 
 for i in range(5):
-    action.move_by_offset(40, 0).perform()
+    action.move_by_offset(50, 0).perform()
     sleep(0.4)
 
 action.release()

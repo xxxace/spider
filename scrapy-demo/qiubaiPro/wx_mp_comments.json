@@ -1,0 +1,64 @@
+{
+    "wx_mp_comments": [
+        {
+            "name": "小程序技术专员-binnie",
+            "avatar_src": "https://mmbiz.qpic.cn/mmbiz_jpg/EhZ0Apwc3PE1BWpdFyDHX3IF030WehVgmoX0XicjSL0AYxFUM1sQTZIQTkhzTfCTvicBFUNrQlfllSBLhrOVZ77Q/0?wx_fmt=jpeg",
+            "comment": "目前小程序开发者可以通过 wx.login 接口直接获取用户的 openId 与 unionId 信息，实现微信身份登录。对许多小程序使用场景，用户无需提供头像昵称。如有必要场景需收集用户头像昵称，可在个人中心或设置等页面让用户完善个人资料。",
+            "date": "2022-05-10"
+        },
+        {
+            "name": "烟斗",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/WD4FduqfeKImDwSfo8nyiaiasvdYLSvp3FxN6X3R3vy4p8TQMJd26oVw/64",
+            "comment": "能举报不？刚刚看完楼主的发言，发现原来废除 wx.getUserProfile 接口的原因是：于是想吐槽一下，但是发现必须得先登录，于是我就乖乖的点了右上角的登录按钮，结果要我扫码登录，只能又乖乖的拿出手机，打开微信，扫一扫，手机出来下面的界面嘿嘿，感觉虽然不是小程序，但是跟楼主描述的情况挺像的，也是要求手机昵称和头像，更巧的是下面也有个【拒绝】按钮，要不点点试试于是点了【拒绝】，然后.......没想到真的和楼主描述的一样啊真的是“如果用户拒绝授权，则无法使用小程序或相关功能”看来确实要整改，不然真的乱套了，太流氓了！！！",
+            "date": "2022-05-17"
+        },
+        {
+            "name": "王龙宇",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/ajNVdqHZLLBolibr5sIaHgCgjyw4CYialP6lwbmBYUSYCmhXKtExggRQ/64",
+            "comment": "这是典型的懒政啊，治不好就杀了。如果是担心用户隐私问题，完全可以在用户授权时提供明显的“匿名授权”选项，或者强化现有的“使用其他头像和昵称”的功能。现在这种一刀砍处理，别说作为开发者，作为用户也体验极差，很多正规平台我都希望直接使用“微信头像昵称”，如这条评论，这是我唯一识别自己的身份标识，你可以想象这个帖子下全是“微信用户”评论的效果，像机器人刷的。以为这样就能解决问题？这是强行逼用户去每个小程序都要重新授权两次不是？？？？wx.getUserProfile这个接口对开发者来说根本没意义了，opernid访问时就能拿到，给用户个随机昵称就行了，授权个锤子。",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "青空",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/EVPtJJ9TsHyhvK0fYOCYhu3kapJ1ZlUNqibF2UV1ibxaE5ib9ZZfaQnOw/64",
+            "comment": "建议解散微信小程序团队",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "百世可以",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/Q3auHgzwzM7BrYcyjIp4kpRicicJBmxJicj0NrGrPQqVcdgRz6Tg5nuZw/64",
+            "comment": "我塔嘛的服了，成天改改改，这球东西有啥改头不就是个破头像和名字么，这玩意不就像人的脸和名字么，不就给人看的么，要不我别出门了，怕别人看见我的匹脸，都别叫我的名字，我塔嘛没授权你叫",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "Memory",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/KgjicalZqCFmKVVcXqqXEjExUKTddEGCgFpjSjk9S844/64",
+            "comment": "",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "赞赞赞",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/Q3auHgzwzM5PZAZZM7hJdrMzxqYgK1H4eC5BZo52Ez7Hx9ZibsgFQLw/64",
+            "comment": "每次调整都是因为少部分开发者乱用能力，然后一刀砍，直接下架那些乱用能力的不就行了，为啥要强制调整？？？？",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "小麻花",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/Q3auHgzwzM7tpeGOn17GaTCFSXseS8oMhibR0NH1lG8iaRW0bia0Jk1XQ/64",
+            "comment": "这种调整只会让微信小程序的体验越来越差，最后大家都做app去了。是不是你们对用户体验根本就没有认知？不知道什么才是用户体验？本来一步完成的，结果非要整出个三步四步，这个是体验？还是互联网的产品？简直就是把小程序逐步变成web时代，越来越落后。你关键的问题是解决打开小程序就收集用户信息：那么你可以做的是：审核用户在小程序中是否有行为，有行为才允许调用授权获取头像的接口。而不是直接给出空白头像和统一名称。如果要解决用户不愿意提供头像和昵称的信息，那么就提供一个组件：在授权时，提供两个按钮，1个按钮是使用微信头像和昵称，另外一个按钮是使用空白头像，稍后添加。而不是一刀切从接口层改变，为用户提供更多使用成本门槛。小程序做的再优秀，入口体验都差，哪里还有什么好体验产品，或者体验好的小程序。能提出的这个策略的人，一定是一个不懂用户体验的运营。如果是产品，那就请你改行把。",
+            "date": "2022-09-29"
+        },
+        {
+            "name": "up",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/icdxlFfyKicUD3BeFmt9KMyZwRpwuXFj787RuCQBIfwSc/64",
+            "comment": "真的是无语，昵称头像都当个宝。太草木皆兵了。",
+            "date": "2022-05-09"
+        },
+        {
+            "name": "陈宇明",
+            "avatar_src": "https://wx.qlogo.cn/mmhead/Q3auHgzwzM6TRVicNfqvBM9xQEsJJsNliaCCLqzrueTQ7ZhtjE0UiaWWw/64",
+            "comment": "",
+            "date": "2022-05-09"
+        }
+    ]
+}
