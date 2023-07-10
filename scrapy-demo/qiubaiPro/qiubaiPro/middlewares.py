@@ -7,6 +7,8 @@ from scrapy import signals
 
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
+from scrapy.http import HtmlResponse
+from time import sleep
 
 
 class QiubaiproSpiderMiddleware:
@@ -87,7 +89,16 @@ class QiubaiproDownloaderMiddleware:
         # - return a Response object
         # - return a Request object
         # - or raise IgnoreRequest
-        return response
+
+        if request.url in []:
+            broser = spider.broser
+            broser.get(request.url)
+            sleep(3)
+            page_text = broser.page_source
+            newResponse = HtmlResponse(request.url, body=page_text, encoding="utf-8", request=request)
+            return newResponse
+        else:
+            return response
 
     def process_exception(self, request, exception, spider):
         # Called when a download handler or a process_request()

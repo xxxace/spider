@@ -1,5 +1,7 @@
 import scrapy
 from qiubaiPro.items import QiubaiproItem
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
 
 
 class QuibaiSpider(scrapy.Spider):
@@ -34,6 +36,19 @@ class QuibaiSpider(scrapy.Spider):
     #         })
 
     #     return comment_list
+    
+    def start_requests(self):
+        browser_option = ChromeOptions()
+        # 无头浏览器（即不显示浏览器）
+        browser_option.add_argument('--headless')
+        browser_option.add_argument('--disable-gpu')
+        # 实现规避检测
+        browser_option.add_experimental_option(
+            'excludeSwitches', ['enable-automation']
+        )
+        # 创建selenium浏览器
+        self.browser = webdriver.Chrome(options=browser_option)
+        return super().start_requests()
 
     def parse(self, response):
         # 解析：评论者 + 内容 + 日期
@@ -58,3 +73,9 @@ class QuibaiSpider(scrapy.Spider):
             item['date'] = date
             # 将item提交给管道
             yield item
+
+    def closed(self, reason):
+        print('self', self)
+        print('reason', reason)
+        print('closeddddddddddddddddddddddddddddddd')
+        self.browser.quit()
